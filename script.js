@@ -23,7 +23,7 @@ console.log("valore di input", inputNome.value);
 sendButton.addEventListener("click",
 
     function () {
-        document.getElementById("mio_id").innerHTML= "nome del passeggero"  + nomeUser;
+        document.getElementById("mio_id").innerHTML= "nome del passeggero"  + nomeUser  + "Il prezzo del tuo biglietto è:"+ risultato  +"€";
         nomeUser = inputNome.value;
         console.log(nomeUser);
     }
