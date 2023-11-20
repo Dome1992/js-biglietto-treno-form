@@ -23,6 +23,7 @@ console.log("valore di input", inputNome.value);
 sendButton.addEventListener("click",
 
     function () {
+        document.getElementById("mio_id").innerHTML= "nome del passeggero"  + nomeUser;
         nomeUser = inputNome.value;
         console.log(nomeUser);
     }
@@ -117,6 +118,6 @@ if(userAge < 18) {
 
 
 // Output per lo User 
-document.getElementById("mio_id").innerHTML= "Il prezzo del tuo biglietto è:"+ risultato  +"€";
+/*document.getElementById("mio_id").innerHTML= "Il prezzo del tuo biglietto è:"+ risultato  +"€";*/
 
 
