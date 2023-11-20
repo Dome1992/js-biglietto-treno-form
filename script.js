@@ -26,6 +26,26 @@ sendButton.addEventListener("click",
         document.getElementById("mio_id").innerHTML= "nome del passeggero"  + nomeUser  + "Il prezzo del tuo biglietto è:"+ risultato  +"€";
         nomeUser = inputNome.value;
         console.log(nomeUser);
+
+        kmUser = userKm.value;
+        console.log(kmUser);
+
+        etaUser = userAge.value;
+        console.log(etaUser);
+
+        if(userAge < 18) {
+            //console.log ("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");
+            risultato= moltiplicazione - sconto20 ;
+        
+        
+        } else if (userAge > 65) {
+           // console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");
+           risultato=  moltiplicazione - sconto40  ;
+        
+        } else {
+            //console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");
+            risultato= moltiplicazione ;
+        }
     }
 );
 
@@ -42,13 +62,7 @@ console.log(userKm);
 
 console.log("valore di input", userKm.value);
 
-sendButton.addEventListener("click",
 
-    function () {
-        kmUser = userKm.value;
-        console.log(kmUser);
-    }
-);
 
 
 // Quanti anni hai?
@@ -62,13 +76,6 @@ console.log(userAge);
 
 console.log("valore di input", userAge.value);
 
-sendButton.addEventListener("click",
-
-    function () {
-        etaUser = userAge.value;
-        console.log(etaUser);
-    }
-);
 
 
 
@@ -101,7 +108,7 @@ let risultato ="";
 
 // Confronto prezzo età
 
-if(userAge < 18) {
+/*if(userAge < 18) {
     //console.log ("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");
     risultato= moltiplicazione - sconto20 ;
 
@@ -113,7 +120,7 @@ if(userAge < 18) {
 } else {
     //console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");
     risultato= moltiplicazione ;
-}
+}*/
 
 
 
