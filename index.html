@@ -10,22 +10,42 @@
     <h1 id="mio_id">
     </h1>
 
-    <div class="form">
-        <div>
-            <h1>Nome Cognome</h1>
-            <input class="nomeuser"  type="text">
+    <div class="conteiner-fluid">
+        <div class="row">
+            <div class="col-6">
+
+                <div class="form">
+                           <div>
+                                <h2 id="nome">Nome Cognome</h2>
+                                       <input type="text" id="nome">
+                                </div>
+
+                            <div>
+                                <h2 id="km">Km da percorrere</h2>
+                                    <input type="number" id="km">
+                                </div>
+
+                            <div>
+                                <h2 id="eta">Fascia di età</h2>
+                                    <select name="" id="eta">
+                                        <option value="18">Minorenne</option>
+                                        <option value="">Maggiorenne</option>
+                                        <option value="65">Over65</option>
+                                    </select>
+                            </div>
+
+                            <div>
+                                <button id="submit">GENERA</button>
+                            </div>
+                </div>
+
+            </div>   
         </div>
-        <div>
-            <h1>km da percorrere</h1>
-            <input  class="kmuser" type="number">
-        </div>
-        <div>
-            <h1>Fascia di età</h1>
-            <input class="etauser"  type="number">
-        </div>
+        
+        
+        
+        
     </div>
-    <button id="send">GENERA</button>
-    <button id="annulla">ANNULLA</button>
 
 
     <script type="text/javascript" src="script.js">

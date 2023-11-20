@@ -1,26 +1,60 @@
-/* Il programma dovrà chiedere all’utente il numero di chilometri che vuole percorrere e l’età del passeggero.
-Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
-il prezzo del biglietto è definito in base ai km (0.21 € al km)
-va applicato uno sconto del 20% per i minorenni
-va applicato uno sconto del 40% per gli over 65.
-L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
-Questo richiederà un minimo di ricerca.*/
+const nameInput = document.getElementById("nome");
+
+const kmInput = (document.getElementById("km"));
+
+const etaInput = (document.getElementById("eta"));
+
+const button = document.getElementById("submit");
+
+console.log(nameInput,kmInput,etaInput,button, 
+    typeof(nameInput,kmInput,etaInput,button));
+
+const bigliettoBase = 0.21;
+
+console.log(bigliettoBase, typeof(bigliettoBase));
+
+    button.addEventListener("click", function () {
+        // Prendo il valore dell'input
+        const nome = nameInput.value;
+        console.log(nome);
+
+        const km = kmInput.value;
+        console.log(km);
+
+        const eta = etaInput.value;
+        console.log(eta)
+
+        const bigliettoKm = (bigliettoBase * km);
+        console.log(bigliettoKm, typeof (bigliettoKm));
+
+        let bigliettoScontato = bigliettoKm 
+        if (eta < 18 ) {
+            bigliettoScontato = bigliettoKm * 20 / 100; 
+        } else if (eta > 65) {
+            bigliettoScontato = bigliettoKm * 40 / 100;
+            }
+            console.log(bigliettoScontato, typeof(bigliettoScontato));
+
+        document.getElementById("price").innerHTML= `<span>Il costo del biglietto è</span> ${bigliettoScontato} ${"<span>euro</span>"}`
+        document.getElementById("price").innerHTML= `Il costo del biglietto è ${bigliettoScontato.toFixed(2)} ${"<span>euro</span>"}`
+    });
 
 
-// Selezione dell'input user
-const inputNome = document.querySelector(".nomeuser");
-
-// Selezione del bottone invio dati
-const sendButton = document.getElementById("send");
-
-let nomeUser = ""
-
-console.log(inputNome);
-
-console.log("valore di input", inputNome.value);
 
 
-sendButton.addEventListener("click",
+
+
+
+
+
+
+
+
+
+
+
+
+/*sendButton.addEventListener("click",
 
     function () {
         document.getElementById("mio_id").innerHTML=    nomeUser  + "Il prezzo del tuo biglietto è:"+"€";
@@ -55,7 +89,7 @@ sendButton.addEventListener("click",
 
 
 
-        const kmEuro = 0.21;
+    
         const userMinorenni = 20;
         const userAnziani = 40;
         const moltiplicazione = userKm * kmEuro;
