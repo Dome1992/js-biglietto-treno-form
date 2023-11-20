@@ -23,15 +23,45 @@ console.log("valore di input", inputNome.value);
 sendButton.addEventListener("click",
 
     function () {
-        document.getElementById("mio_id").innerHTML= "nome del passeggero"  + nomeUser  + "Il prezzo del tuo biglietto è:"+ risultato  +"€";
+        document.getElementById("mio_id").innerHTML= "nome del passeggero"  + nomeUser  + "Il prezzo del tuo biglietto è:" +"€";
         nomeUser = inputNome.value;
         console.log(nomeUser);
+
+
+        const userKm = document.querySelector(".kmuser");
+
+        let kmUser = ""
+
+        console.log(userKm);
+
+        console.log("valore di input", userKm.value);
 
         kmUser = userKm.value;
         console.log(kmUser);
 
+
+        console.log (userAge);
+        const userAge = document.querySelector(".etauser");
+
+        let etaUser = ""
+
+        console.log(userAge);
+
+        console.log("valore di input", userAge.value);
+
         etaUser = userAge.value;
         console.log(etaUser);
+
+
+
+        const kmEuro = 0.21;
+        const userMinorenni = 20;
+        const userAnziani = 40;
+        const moltiplicazione = userKm * kmEuro;
+        const sconto20 = moltiplicazione * userMinorenni / 100;
+        const sconto40 = moltiplicazione * userAnziani / 100;
+        let risultato ="";
+
 
         if(userAge < 18) {
             //console.log ("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");
@@ -53,28 +83,28 @@ sendButton.addEventListener("click",
 
 // Chiediamo a User quanti KM vuole percorrere?
 /*const userKm = parseInt(prompt("Quanti KM vuoi percorrere?"));
-console.log (userKm);*/
+console.log (userKm);
 const userKm = document.querySelector(".kmuser");
 
 let kmUser = ""
 
 console.log(userKm);
 
-console.log("valore di input", userKm.value);
+console.log("valore di input", userKm.value);*/
 
 
 
 
 // Quanti anni hai?
 /*const userAge = parseInt(prompt("Quanti anni hai?"));
-console.log (userAge);*/
+console.log (userAge);
 const userAge = document.querySelector(".etauser");
 
 let etaUser = ""
 
 console.log(userAge);
 
-console.log("valore di input", userAge.value);
+console.log("valore di input", userAge.value);*/
 
 
 
@@ -82,29 +112,29 @@ console.log("valore di input", userAge.value);
 
 
 // Prezzo definito Euro-Km 0.21 €
-const kmEuro = 0.21;
+/*const kmEuro = 0.21;*/
 
 
 // Sconto definito per i minorenni 20%
-const userMinorenni = 20;
+/*const userMinorenni = 20;*/
 
 // Sconto definito per gli anziani 40%
-const userAnziani = 40;
+/*const userAnziani = 40;*/
 
 
 // Calcolo prezzo del viaggio
-const moltiplicazione = userKm * kmEuro;
+/*const moltiplicazione = userKm * kmEuro;*/
 /*console.log("Il prezzo senza sconto è:", moltiplicazione ,"€");*/
 
 // Calcolo prezzo viaggio minorenni
-const sconto20 = moltiplicazione * userMinorenni / 100;
+/*const sconto20 = moltiplicazione * userMinorenni / 100;*/
 /*console.log("Il prezzo scontato del 20% per i minorenni è:", moltiplicazione - sconto20 , "€");*/
 
 // Calcolo prezzo viaggio maggiorenni
-const sconto40 = moltiplicazione * userAnziani / 100;
+/*const sconto40 = moltiplicazione * userAnziani / 100;*/
 /*console.log("Il prezzo scontato del 40% per gli over 65 è:", moltiplicazione - sconto40 , "€");*/
 
-let risultato ="";
+/*let risultato ="";*/
 
 // Confronto prezzo età
 
