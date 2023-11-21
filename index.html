@@ -4,55 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Calcolatore Prezzo Biglietto</title>
 </head>
 <body>
-    <h1 id="mio_id">
-    </h1>
+    <div class="container">
+        <h1>Calcolatore Prezzo Biglietto</h1>
+        <form id="ticketForm">
+            <label for="kmInput">Chilometri da percorrere:</label>
+            <input type="number" id="kmInput" required>
 
-    <div class="conteiner-fluid">
-        <div class="row">
-            <div class="col-6">
+            <label for="ageInput">Età del passeggero:</label>
+            <input type="number" id="ageInput" required>
 
-                <div class="form">
-                           <div>
-                                <h2 id="nome">Nome Cognome</h2>
-                                       <input type="text" id="nome">
-                                </div>
+            <button type="button" onclick="calcolaPrezzo()">Calcola Prezzo</button>
 
-                            <div>
-                                <h2 id="km">Km da percorrere</h2>
-                                    <input type="number" id="km">
-                                </div>
-
-                            <div>
-                                <h2 id="eta">Fascia di età</h2>
-                                    <select name="" id="eta">
-                                        <option value="18">Minorenne</option>
-                                        <option value="">Maggiorenne</option>
-                                        <option value="65">Over65</option>
-                                    </select>
-                            </div>
-
-                            <div>
-                                <button id="submit">GENERA</button>
-                            </div>
-                </div>
-
-            </div>   
-        </div>
-        
-        
-        
-        
+            <div id="output"></div>
+        </form>
     </div>
 
-
-    <script type="text/javascript" src="script.js">
-
-    </script>
-
-
-    
+    <script type="text/javascript" src="script.js"></script>
 </body>
 </html>
